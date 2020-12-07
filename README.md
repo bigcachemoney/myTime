@@ -8,7 +8,7 @@ myTime is a visual web tool that expresses how a user spends their time in a day
 
 ### Wireframe 
 
-https://wireframe.cc/26O85E
+![image](https://wireframe.cc/26O85E)
 
 
 
