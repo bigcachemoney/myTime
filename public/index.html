@@ -2,10 +2,66 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
-    <script type="text/javascript" src="./bundle.js"></script>
+    <title>myTime</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <script src="path/to/chartjs/dist/Chart.js"></script>
+    <link rel="stylesheet" href="../src/styles/index.scss" />
+
   </head>
   <body>
-    <main id='main'></main>
+    <div className="container">
+      <canvas id="myChart" width="200px" height="200px"></canvas>
+    </div>
+
+      <script>
+        var myChart = document.getElementById('myChart');
+        var pieChart = new Chart(myChart, {
+          type: 'pie',
+          data: {
+              labels: ['sleep', 'commute', 'work'],
+              datasets: [{
+                label: '# of hours',
+                data: [7, 2, 8],
+                backgroundColor:[
+                  '#f1c40f',
+                  '#e67e22',
+                  '#16a085',
+                  '#2980b9',
+                ]
+              }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false
+          }
+        });
+      </script>
+      
+      <div className="question-container">
+          <div>"How many hours do you sleep?"</div>
+            <div className="slide-container">
+              <input type="range" min="0" max="24" value="1" id="ranger" className="slider" />
+              <p>Value: <span id="value"></span></p>
+            </div>
+          <div>"How long is your commute?"</div>
+            <div className="slide-container">
+              <input type="range" min="0" max="24" value="1" id="ranger" className="slider" />
+              <p>Value: <span id="value"></span></p>
+            </div>
+          <div>"How many hours do you work?"</div>
+            <div className="slide-container">
+              <input type="range" min="0" max="24" value="1" id="ranger" className="slider" />
+              <p>Value: <span id="value"></span></p>
+            </div>
+        </div>
+
+
+        <div className="help-links">
+              <!-- <a href= https://www.healthline.com/health/sleep/sleep-calculator#importance-of-sleep> </a> -->
+            <!-- forbes.com/sites/theyec/2018/10/26/make-the-most-of-your-commute-with-these-eight-productive-tasks/?sh=1997e78b6f2f -->
+          <!-- https://www.nytimes.com/guides/business/how-to-improve-your-productivity-at-work -->
+        <!-- https://www.lifehack.org/articles/productivity/how-get-more-done-day-7-ideas-that-really-work.html -->
+        </div>
+
   </body>
 </html>
