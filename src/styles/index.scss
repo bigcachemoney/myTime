@@ -1,109 +1,125 @@
-//chart colors #f1c40f, #e67e22, #16a085, #2980b9
-
-*{
-  margin: 0;
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+* {
+  /* margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; */
+  font-family: 'Poppins', sans-serif;
+} 
 
-html, body{
-  display: grid;
+html, body {
+  /* display: grid;
   height: 100%;
   text-align: center;
-  place-items: center;
-  background: #664aff;
-}
+  place-items: center; */
+  background: bisque;
+} 
 
 .range{
   height: 80px;
-  width: 380px;
+  width: 30%;
   background: #fff;
   border-radius: 10px;
   padding: 0 65px 0 45px;
+  box-shadow: 2px 4px 8px rgba(0,0,0,0.1);
 }
 
-.range .sliderValue{
+.sliderValue{
   position: relative;
   width: 100%;
 }
 
-.range .sliderValue span{
+.sliderValue span{
   position: absolute;
   height: 45px;
-  width: 45px; 
-  background: #664aff;
-  color: #fff;
+  width: 45px;
+  transform: translateX(-50%) scale(0);
   font-weight: 500;
+  text-align: center;
   top: -40px;
-  transform: translateX(-50%);
   line-height: 55px;
   z-index: 2;
+  color: #fff;
+  transform-origin: bottom;
+  transition: transform 0.3s ease-in-out;
 }
 
-.range .field{
-  position: relative;
+.sliderValue span.show{
+  transform: translateX(-30%) scale(1);
+}
+
+.sliderValue span:after{
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: #664AFF;
+  border: 3px solid #fff;
+  z-index: -1;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  border-bottom-left-radius: 50%;
+  box-shadow: 0px 0px 8px rgba(0,0,0,0.1);
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+
+.field{
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
-}
-.range .field .value{
-  position: absolute;
-  font-size: 18px;
-  font-weight: 600;
-  color: #664aff;
+  position: relative;
 }
 
-.range .field .value.left{
+.field .value{
+  position: absolute;
+  font-size: 20px;
+  color: #664AFF;
+  font-weight: 600;
+}
+
+.field .value.left{
   left: -22px;
 }
-.range .field .value.right{
+
+.field .value.right{
   right: -43px;
 }
 
-.range .field input{
+.range input{
   -webkit-appearance: none;
-  height: 3px;
   width: 100%;
+  height: 3px;
   background: #ddd;
   border-radius: 5px;
-  outline:  none;
+  outline: none;
   border: none;
-
+  z-index: 2222;
 }
-//.slide-container{
-//   width: 75%;
-// }
 
-// .slider{
-//   width: 100%;
-//   color: aquamarine;
-// }
+.range input::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+  background: #664AFF;
+  border: 1px solid #664AFF;
+  cursor: pointer;
+}
+.range input::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+  background: #664AFF;
+  border: 1px solid #664AFF;
+  cursor: pointer;
+}
 
-// .container{
-//   width: 400px;
-//   height: 400px;
-// }
-
-// .question-container{
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
+.range input::-webkit-progress-bar{
+  background: #664AFF; 
+}
 
 
-// #slider{
-//   -webkit-appearance: none;
-//   width: 100%;
-//   height: 7px;
-//   outline: none;
-//   border-radius: 3px;
-// }
-// #slider::-webkit-slider-thumb{
-//   -webkit-appearance: none;
-//   width: 48px;
-//   height: 48px;
-//   cursor: pointer;
-//   z-index: 3;
-//   position: relative;
-// }
