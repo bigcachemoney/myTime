@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./dist/main.css" />
+    <title>myTime</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <script src="path/to/chartjs/dist/Chart.js"></script>
+    <link rel="stylesheet" href="./dist/main.css"/>
+  </head>
+
+  <body>
+    <script src="./dist/main.js"></script>
+    <div class="chart-container">
+      <canvas id="myChart" width="300px" height="300px"></canvas>
+    </div>
+    
+
+             
+
+    <div class="question-container">
+        <div class="question1">"How many hours do you sleep?"</div>
+
+      <div class="range">
+        <div class="sliderValue">
+          <span>12</span>
+        </div>
+        <div class="field">
+          <div class="value left">
+            0</div>
+          <input class="question" type="range" min="0" max="24" value="8" steps="1">
+          <div class="value right">
+            24</div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+        <script>
+            const slideValue = document.querySelector("span");
+            const inputSlider = document.querySelector("input");
+            // const inputSlider = document.getElementsByClassName("question");
+
+            inputSlider.oninput = (() => {
+              let value = inputSlider.value;
+              slideValue.textContent = value;
+              // slideValue.style.left = (value/2) + "%";
+              slideValue.style.left = value*4 + "%";
+              slideValue.classList.add("show");
+            });
+
+            inputSlider.onblur = (() => {
+              slideValue.classList.remove("show");
+            });
+
+        </script>
+
+        </div>
+  
+
+  </body>
+</html>
