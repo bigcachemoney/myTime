@@ -1,19 +1,19 @@
-# Simple Node API Backend
+# myTime
 
-Simple Node Backend for avoiding CORS issues in development
-- npm install
-- npm run build
-- npm start
+myTime is a visual web tool that expresses how a user spends their time in a day.
 
-Technologies
-- express
-- axios/ssrc/assets/wireframe.jpg
-- webpack
+### MVP & Features
+* Respond to site data
+* Input personal responses
 
-Implementation
+### Wireframe 
 
-This project allows you to serve your HTML and JS from a custom backend that performs API requests to an external API.
+![image](https://github.com/bigcachemoney/myTime/blob/main/myTime.PNG)
 
-app.js contains the routes that Write your JS in the javascripts folder; your entry file is index.js.
+### Timeline
+* 12/7 - File structure setup, hosting & research
+* 12/8 - Base functionality
+* 12/9 - Test functionality and initial CSS
+* 12/10 - Debug expand past base functionality
+* 12/11 - CSS and debug clean up
 
-In the entry file 
