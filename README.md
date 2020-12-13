@@ -8,7 +8,8 @@ myTime is a visual web tool that expresses how a user spends their time in a day
 
 ### Wireframe 
 
-![image](src/assets/wireframe.jpg)
+![image](https://github.com/bigcachemoney/myTime/blob/master/myTime.PNG)
+
 
 ### Timeline
 * 12/7 - File structure setup, hosting & research
@@ -16,4 +17,3 @@ myTime is a visual web tool that expresses how a user spends their time in a day
 * 12/9 - Test functionality and initial CSS
 * 12/10 - Debug expand past base functionality
 * 12/11 - CSS and debug clean up
-
