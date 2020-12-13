@@ -8,7 +8,7 @@ myTime is a visual web tool that expresses how a user spends their time in a day
 
 ### Wireframe 
 
-![image](https://github.com/bigcachemoney/myTime/blob/master/myTime.PNG)
+![image](https://github.com/bigcachemoney/myTime/blob/master/myTime.png)
 
 
 ### Timeline
